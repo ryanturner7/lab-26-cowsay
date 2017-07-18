@@ -4,29 +4,30 @@ import ReactDom from 'react-dom';
 import cowsay from 'cowsay-browser';
 import faker from 'faker';
 
-Class navbar extends React.Component {
+Class App extends React.Component {
   constructor(props){
     super(props);
-  }
-
-  render(){
-    return (
-      <header className="cowsay-navbar">
-      <h1> counter </h1>
-      </header>
-    );
-  }
-}
-
-  class App extends React.Component {
-    constructor(props){
-      super(props);
-      this.state.content = {
-        title: "Generate Cowsay Lorem",
-        count: 0,
-      }
-      this.
+    this.state = {
+      content: cowsay.say({
+        text: 'Hello world!'
+        e : 'oO'
+        T : "U "
+      })
     }
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e){
+    this.setState(State => {
+      return {
+        content: cowsay.say({
+          text: faker.lorem.sentence(),
+          e: "oO",
+          T: "U "
+        }),
+      }
+    })
   }
 
 render() {
@@ -37,3 +38,4 @@ render() {
      </div>
    )
  }
+ReactDom.render( <App />, document.getElementById('root'))
