@@ -9,8 +9,8 @@ Class App extends React.Component {
     super(props);
     this.state = {
       content: cowsay.say({
-        text: 'Hello world!'
-        e : 'oO'
+        text: 'Hello world!',
+        e : 'oO',
         T : "U "
       })
     }
@@ -38,4 +38,4 @@ render() {
      </div>
    )
  }
-ReactDom.render( <App />, document.getElementById('root'))
+ReactDom.render( <App />, document.getElementById('root'));
