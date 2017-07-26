@@ -4,7 +4,7 @@ import ReactDom from 'react-dom';
 import cowsay from 'cowsay-browser';
 import faker from 'faker';
 
-Class App extends React.Component {
+class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -31,11 +31,13 @@ Class App extends React.Component {
   }
 
 render() {
-   return (
-     <div>
-       <button onClick={this.handleClick}>Click Me</button>
-       {cowsay.say({ text: this.state.content }).split("\n").map(i => <div key={keyGen()}>{i}</div>)}
+  return (
+      <div>
+       <h1> Cowsay lorem ipsum </h1>
+       <button onClick={this.handleClick}> click me </button
+       <pre>{this.state.content}</pre>
      </div>
-   )
+   );
  }
+}
 ReactDom.render( <App />, document.getElementById('root'));
