@@ -15,6 +15,7 @@ class App extends React.Component {
       })
     }
 
+
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -34,7 +35,7 @@ render() {
   return (
       <div>
        <h1> Cowsay lorem ipsum </h1>
-       <button onClick={this.handleClick}> click me </button
+       <button onClick={this.handleClick}> click me </button>
        <pre>{this.state.content}</pre>
      </div>
    );
